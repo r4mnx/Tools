@@ -53,7 +53,7 @@ function hostScan(){
   for i in $(seq 1 254); do
     timeout 2 bash -c "ping -c 1 $nameHost.$i &>/dev/null" && echo -e "${Yellow}[*]${Blue} Host $nameHost.$i - ${Green}ACTIVE${EndC}" &
 done; wait
-  echo -e "\n${Yellow}[*]${Blue} Escaneo finalizado.${End}\n"
+  echo -e "\n${Yellow}[*]${Blue} Escaneo finalizado.${EndC}\n"
 }
 
 function ipcidr(){
@@ -180,7 +180,7 @@ function ipcidr(){
     ipscan=$(echo ${newHost_arr[@]} | tr ' ' '.')
     timeout 2 bash -c "ping -c 1 ${ipscan} &>/dev/null" && echo -e "${Green}[+]${Blue} Host${GrayL} ${ipscan} - ${Green}ACTIVE${EndC}" &
 done; wait
-  echo -e "\n${Yellow}[*]${Blue} Escaneo finalizado.${End}\n"
+  echo -e "\n${Yellow}[*]${Blue} Escaneo finalizado.${EndC}\n"
 }
 
 while getopts "p:o:h" arg; do
