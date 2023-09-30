@@ -44,7 +44,7 @@ function portScan(){
   for port in $(seq 1 65535); do
     (echo '' > /dev/tcp/"$nameHost"/$port) 2>/dev/null && echo -ne "${Green}[+]${GrayL} Port: $port >> ${Green}OPEN${GrayL}\n"
   done
-  echo -e "\n${Yellow}[*]${Blue} Escaneo finalizado.\n"
+  echo -e "\n${Yellow}[*]${Blue} Escaneo finalizado.${EndC}\n"
 }
 
 function hostScan(){
